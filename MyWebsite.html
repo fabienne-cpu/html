@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --text: #1d1c1a;
+      --muted: #6b6760;
+      --line: #e4e0d7;
+      --accent: #2f5d50;
+      --accent-soft: #e3ece8;
+      --placeholder: #b4532a;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 20px 96px;
+    }
+
+    .intro {
+      background: var(--accent-soft);
+      border-radius: 18px;
+      padding: 40px 36px 28px;
+    }
+    @media (max-width: 520px) {
+      .intro { padding: 28px 20px 16px; }
+    }
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(36px, 7vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 28px;
+    }
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      font-size: 26px;
+      margin: 72px 0 24px;
+    }
+    .intro p { margin: 0 0 16px; color: var(--text); }
+
+    .ph {
+      color: var(--placeholder);
+      font-style: italic;
+    }
+
+    /* ---------- Interests ---------- */
+    .interests {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .interest {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 16px 20px;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .interest:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: grid;
+      place-items: center;
+    }
+    .icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .interest span {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .photo {
+      margin: 0 0 28px;
+    }
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+    }
+    .photo figcaption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+      font-style: italic;
+      text-align: center;
+    }
+
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    th, td {
+      text-align: left;
+      padding: 14px 18px;
+      vertical-align: top;
+    }
+    th {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+    }
+    tbody tr + tr td { border-top: 1px solid var(--line); }
+    td:first-child {
+      white-space: nowrap;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    td strong { font-weight: 600; }
+
+    .map-frame {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .table-note {
+      margin: 14px 0 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <header class="intro">
+      <p class="eyebrow">About me</p>
+      <h1>Hi, I'm Fabienne!</h1>
+      <p>Having completed my Bachelor's in Business Administration, I'm now pursuing a Master's degree in Business Intelligence and Process Management. I'm from Berlin and I love literature, art and learning new languages!</p>
+    </header>
+
+    <section>
+      <h2>Interests</h2>
+      <ul class="interests">
+        <li class="interest">
+          <div class="icon" aria-hidden="true">
+            <!-- Open book -->
+            <svg viewBox="0 0 24 24"><path d="M2 5.5C4.5 4.5 8 4.3 12 6c4-1.7 7.5-1.5 10-.5V19c-2.5-1-6-1.2-10 .5-4-1.7-7.5-1.5-10-.5z"/><path d="M12 6v13.5"/></svg>
+          </div>
+          <span>Literature &amp; Art</span>
+        </li>
+        <li class="interest">
+          <div class="icon" aria-hidden="true">
+            <!-- Brush -->
+            <svg viewBox="0 0 24 24"><path d="M14.5 4.5l5 5L11 18l-5-5z"/><path d="M6 13c-2 0-3.5 1.5-3.5 3.5 0 1.4-.5 2.5-1 3 3 .5 6.5-.5 7.5-2.5"/><path d="M17 2l5 5"/></svg>
+          </div>
+          <span>Creativity &amp; Languages</span>
+        </li>
+        <li class="interest">
+          <div class="icon" aria-hidden="true">
+            <!-- Mountain above waves -->
+            <svg viewBox="0 0 24 24"><path d="M3 15.5L9 5l3.5 5.5L15 7l6 8.5"/><path d="M7.5 7.8l2.5 1.5"/><path d="M2 20c1.7 0 1.7 1.2 3.3 1.2S7 20 8.7 20s1.7 1.2 3.3 1.2S13.7 20 15.3 20s1.7 1.2 3.4 1.2S20.3 20 22 20"/></svg>
+          </div>
+          <span>Swimming &amp; Climbing</span>
+        </li>
+        <li class="interest">
+          <div class="icon" aria-hidden="true">
+            <!-- Die -->
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3.5"/><circle cx="8" cy="8" r="1.1"/><circle cx="16" cy="8" r="1.1"/><circle cx="12" cy="12" r="1.1"/><circle cx="8" cy="16" r="1.1"/><circle cx="16" cy="16" r="1.1"/></svg>
+          </div>
+          <span>Board Games</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Stations</h2>
+
+      <!-- The image file must be in the same folder (repo) as this HTML file. -->
+      <figure class="photo">
+        <img src="Berliner_Dom.jpeg"
+             alt="Berlin Cathedral on Museum Island in warm evening light"
+             width="1600" height="1200" loading="lazy">
+        <figcaption>One of my favourite places in Berlin – Museumsinsel!</figcaption>
+      </figure>
+
+      <!-- One <tr> per station. Copy a row to add more, delete rows you don't need. -->
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th>Station</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Current</td>
+              <td><strong>Master's Programme</strong><br>HWR Berlin</td>
+              <td>Business Intelligence and Process Management</td>
+            </tr>
+            <tr>
+              <td>2022 – 2025</td>
+              <td><strong>Bachelor's Programme</strong><br>HWR Berlin</td>
+              <td>Business Administration<br>Bachelor's thesis on AI acceptance</td>
+            </tr>
+            <tr>
+              <td>2021 – 2023</td>
+              <td><strong>Junior Consultant</strong><br>Student consultancy, Potsdam</td>
+              <td>Consulting projects as part of a student-run consultancy</td>
+            </tr>
+            <tr>
+              <td>2020 – 2022</td>
+              <td><strong>Studies in Linguistics</strong><br>Potsdam</td>
+              <td>Linguistics – my starting point before switching to business</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Alongside my studies, I gained work experience in the Marketing sector and completed an internship in Knowledge Management.</p>
+    </section>
+
+    <section>
+      <h2>Where I've studied &amp; worked</h2>
+      <!-- map.html is created with the Python script (folium) and must be in the same folder/repo -->
+      <iframe class="map-frame" src="map.html" title="Map of Berlin and Potsdam" loading="lazy"></iframe>
+    </section>
+
+  </main>
+
+</body>
+</html>
